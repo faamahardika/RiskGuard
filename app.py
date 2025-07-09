@@ -26,7 +26,7 @@ def predict_risk(data):
         else : return "Obese"
 
     df['bmi_category'] = df['bmi'].apply(get_bmi_cat)
-    df['is_smoker'] = (df['smoker'] == 'no').astype(int)
+    df['is_smoker'] = (df['smoker'] == 'yes').astype(int)
     df['is_obese'] = (df['bmi_category'] == 'Obese').astype(int)
     df['smoker_and_obese'] = df['is_smoker'] * df['is_obese']
     
@@ -35,7 +35,7 @@ def predict_risk(data):
     features_for_clustering = df[['age', 'bmi', 'is_smoker']]
     scaled_features = scaler.transform(features_for_clustering)
     risk_segment = kmeans.predict(scaled_features)[0]
-    segment_map = {0: 'Low Risk', 1: 'High Risk', 2: 'Medium Risk'}
+    segment_map = {0:'High Risk' , 1: 'Medium Risk', 2: 'Low Risk'}
     risk_label = segment_map.get(risk_segment, 'Unknown')
     
     # Pipeline Prediction
