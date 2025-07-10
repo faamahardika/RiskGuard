@@ -50,9 +50,9 @@ st.title("RiskGuard: Platform Analisis Risiko Nasabah Asuransi 🩺")
 
 st.sidebar.header("Masukkan Data Nasabah Baru")
 
-age = st.sidebar.number_input("Umur", 18, 100, 30)
+age = st.sidebar.number_input("Umur", 18, 100, 25)
 sex = st.sidebar.selectbox("Jenis Kelamin", ['male', 'female'])
-bmi = st.sidebar.number_input("Body Mass Index (BMI)", 15.0, 60.0, 25.0)
+bmi = st.sidebar.number_input("Body Mass Index (BMI)", 15.0, 60.0, 20.0)
 children = st.sidebar.number_input("Jumlah Anak", 0, 10, 0)
 smoker = st.sidebar.selectbox("Apakah Perokok?", ['no', 'yes'])
 region = st.sidebar.selectbox("Wilayah", ['southwest', 'southeast', 'northwest', 'northeast'])
