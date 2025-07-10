@@ -3,6 +3,7 @@
 Repositori ini berisi kode dan artefak untuk **RiskGuard**, sebuah proyek *machine learning* yang bertujuan memprediksi biaya klaim asuransi kesehatan dan melakukan segmentasi nasabah berdasarkan profil risiko mereka. Proyek ini diimplementasikan dalam sebuah *dashboard* interaktif menggunakan Streamlit.
 
 ## 📂 Struktur Repositori
+```bash
 .
 ├── models/                     # Folder berisi model dan artefak yang telah dilatih
 │   ├── prediction_pipeline.joblib  # Pipeline lengkap untuk prediksi
@@ -11,6 +12,8 @@ Repositori ini berisi kode dan artefak untuk **RiskGuard**, sebuah proyek *machi
 ├── app.py                      # Kode aplikasi dashboard Streamlit
 ├── insurance_prediction.ipynb  # Notebook Jupyter berisi analisis dan pemodelan
 └── README.md                   # Dokumentasi proyek (file ini)
+
+```
 
 ## 🎯 Tujuan Proyek
 
